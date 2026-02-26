@@ -3,80 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide-icons@latest/dist/lucide.js"></script>
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-white shadow">
-        <nav class="container mx-auto flex justify-between items-center p-5">
-            <h1 class="text-2xl font-bold">My Portfolio</h1>
-            <ul class="flex space-x-5">
-                <li><a href="#hero" class="hover:text-blue-500">Home</a></li>
-                <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-                <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-            </ul>
-        </nav>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your success is my passion</p>
+        </div>
     </header>
-    <section id="hero" class="bg-blue-500 h-screen flex items-center justify-center text-white text-center">
-        <div>
-            <h2 class="text-5xl font-bold">Welcome to My Portfolio</h2>
-            <p class="mt-4">I'm a web developer with a passion for building user-friendly interfaces</p>
-        </div>
-    </section>
-    <section id="skills" class="container mx-auto p-10">
-        <h2 class="text-3xl font-bold mb-5">My Skills</h2>
-        <div class="space-y-4">
-            <div>
-                <h3 class="font-semibold">HTML</h3>
-                <div class="bg-gray-300 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%;"></div></div>
-            </div>
-            <div>
-                <h3 class="font-semibold">CSS</h3>
-                <div class="bg-gray-300 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%;"></div></div>
-            </div>
-            <div>
-                <h3 class="font-semibold">JavaScript</h3>
-                <div class="bg-gray-300 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%;"></div></div>
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <span>HTML/CSS</span>
+            <div class="progress">
+                <div class="progress-bar html-css" style="width: 90%;"></div>
             </div>
         </div>
-    </section>
-    <section id="projects" class="container mx-auto p-10">
-        <h2 class="text-3xl font-bold mb-5">Projects Showcase</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div class="bg-white p-5 rounded shadow">
-                <h3 class="font-semibold">Project 1</h3>
-                <p>A brief description of Project 1.</p>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress">
+                <div class="progress-bar javascript" style="width: 80%;"></div>
             </div>
-            <div class="bg-white p-5 rounded shadow">
-                <h3 class="font-semibold">Project 2</h3>
-                <p>A brief description of Project 2.</p>
-            </div>
-            <div class="bg-white p-5 rounded shadow">
-                <h3 class="font-semibold">Project 3</h3>
-                <p>A brief description of Project 3.</p>
+        </div>
+        <div class="skill">
+            <span>React</span>
+            <div class="progress">
+                <div class="progress-bar react" style="width: 70%;"></div>
             </div>
         </div>
     </section>
-    <section id="contact" class="container mx-auto p-10">
-        <h2 class="text-3xl font-bold mb-5">Contact Me</h2>
-        <form class="flex flex-col space-y-4">
-            <input type="text" placeholder="Your Name" class="border p-2 rounded" required>
-            <input type="email" placeholder="Your Email" class="border p-2 rounded" required>
-            <textarea placeholder="Your Message" class="border p-2 rounded" required></textarea>
-            <button type="submit" class="bg-blue-500 text-white p-2 rounded">Send Message</button>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project category-development">
+            <h3>Development Projects</h3>
+            <p>Project 1 description...</p>
+        </div>
+        <div class="project category-design">
+            <h3>Design Projects</h3>
+            <p>Project 2 description...</p>
+            <a href="https://www.behance.net/yourdesignlink">Check out my Behance for design work</a>
+        </div>
+        <div class="project category-strategy">
+            <h3>Strategy Projects</h3>
+            <p>Project 3 description...</p>
+            <a href="https://www.linkedin.com/in/yourlinkincasestudy">View LinkedIn case study for strategy</a>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:retamozokaroll05@gmail.com" method="POST" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
-    <footer class="bg-gray-800 text-white text-center p-5">
-        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
-        <div id="lucide-icons" class="flex justify-center space-x-5 mt-2">
-            <a class="hover:text-blue-500"><lucide-icon name="github" size="24"></lucide-icon></a>
-            <a class="hover:text-blue-500"><lucide-icon name="linkedin" size="24"></lucide-icon></a>
-        </div>
+    <footer>
+        <p>Connect with me on social media:</p>
+        <a href="https://www.instagram.com/k8studio_?utm_source=qr&igsh=bDg2b2c1enA0ajE1">Instagram</a>
+        <a href="https://www.linkedin.com/in/karoll-r-3549721aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
     </footer>
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
