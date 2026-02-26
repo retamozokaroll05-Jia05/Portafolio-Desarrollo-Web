@@ -1,191 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karoll Galera | Portfolio</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --dev-blue: #3b82f6; 
-            --design-purple: #a855f7; 
-            --growth-green: #22c55e; 
-        }
-        body { 
-            background-color: #030303; 
-            color: #fafafa; 
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .nav-glass { backdrop-filter: blur(15px); background: rgba(3, 3, 3, 0.8); border-bottom: 1px solid rgba(255,255,255,0.05); }
-        
-        /* Estilos de Botones de Intercambio (Preview/Code) */
-        .tab-btn { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .tab-btn.active { background: white; color: black; box-shadow: 0 0 15px rgba(255,255,255,0.2); }
-        
-        .code-display { display: none; }
-        .code-display.active { display: block; animation: fadeIn 0.5s ease; }
-        .preview-display { display: block; }
-        .preview-display.hidden { display: none; }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        /* Tarjetas de Habilidades con Psicología de Color */
-        .skill-card { background: #0a0a0a; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s; }
-        .skill-card.dev:hover { border-color: var(--dev-blue); box-shadow: 0 0 30px rgba(59, 130, 246, 0.1); }
-        .skill-card.design:hover { border-color: var(--design-purple); box-shadow: 0 0 30px rgba(168, 85, 247, 0.1); }
-        .skill-card.growth:hover { border-color: var(--growth-green); box-shadow: 0 0 30px rgba(34, 197, 94, 0.1); }
-    </style>
+    <title>Portfolio</title>
 </head>
 <body>
-
-    <nav class="nav-glass fixed top-0 w-full z-50 py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tighter uppercase">KG<span class="text-green-500">.</span></div>
-            <div class="hidden md:flex space-x-8 text-[10px] font-bold tracking-[0.3em] text-gray-400">
-                <a href="#experiencia" class="hover:text-white transition">PROYECTOS</a>
-                <a href="#habilidades" class="hover:text-white transition">HABILIDADES</a>
-                <a href="mailto:mretamozokaroll05@gmail.com" class="border border-white/20 px-4 py-2 rounded-full hover:bg-white hover:text-black transition">CONTACTO</a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="min-h-screen flex flex-col justify-center px-6 max-w-5xl mx-auto pt-20">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <div class="flex items-center gap-2 mb-6">
-                <i data-lucide="hand" class="text-green-400 w-5"></i>
-                <span class="text-gray-400 text-sm font-medium">¡Hola! Soy Karoll Galera</span>
-            </div>
-            <h1 class="text-5xl md:text-8xl font-bold leading-none mb-8 tracking-tight">
-                Crafting <span class="text-green-500">purpose driven experiences</span> that inspire & engage.
-            </h1>
-            <p class="text-gray-400 max-w-2xl text-lg md:text-xl leading-relaxed">
-                Estratega Digital y Desarrolladora Web enfocada en crear productos digitales de alto rendimiento. Fusiono código, diseño y marketing para alcanzar objetivos comerciales.
-            </p>
-        </div>
-    </section>
-
-    <section id="habilidades" class="px-6 py-32 max-w-6xl mx-auto">
-        <div class="flex items-center gap-2 mb-12">
-            <i data-lucide="sparkle" class="text-blue-500 w-4"></i>
-            <h2 class="text-gray-500 text-xs tracking-[0.3em] uppercase">Expertise & Tools</h2>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="skill-card dev p-8 rounded-[2rem]" data-aos="fade-up">
-                <i data-lucide="code-2" class="text-blue-500 mb-6 w-8 h-8"></i>
-                <h3 class="text-xl font-bold mb-4">Desarrollo Web</h3>
-                <p class="text-sm text-gray-500 mb-6 leading-relaxed">Arquitectura sólida y código limpio para soluciones escalables.</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">JAVA</span>
-                    <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">JAVASCRIPT</span>
-                    <span class="text-[10px] bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full font-bold">HTML5/CSS3</span>
-                </div>
-            </div>
-
-            <div class="skill-card design p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
-                <i data-lucide="palette" class="text-purple-500 mb-6 w-8 h-8"></i>
-                <h3 class="text-xl font-bold mb-4">Diseño Creativo</h3>
-                <p class="text-sm text-gray-500 mb-6 leading-relaxed">Identidad visual y contenido dinámico que capta la atención.</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="text-[10px] bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full font-bold">PHOTOSHOP</span>
-                    <span class="text-[10px] bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full font-bold">AFTER EFFECTS</span>
-                    <span class="text-[10px] bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full font-bold">FIGMA</span>
-                </div>
-            </div>
-
-            <div class="skill-card growth p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
-                <i data-lucide="trending-up" class="text-green-500 mb-6 w-8 h-8"></i>
-                <h3 class="text-xl font-bold mb-4">Estrategia 360°</h3>
-                <p class="text-sm text-gray-500 mb-6 leading-relaxed">Conversión y crecimiento mediante análisis y marketing digital.</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="text-[10px] bg-green-500/10 text-green-400 px-3 py-1 rounded-full font-bold">SHOPIFY</span>
-                    <span class="text-[10px] bg-green-500/10 text-green-400 px-3 py-1 rounded-full font-bold">ESTRATEGIA</span>
-                    <span class="text-[10px] bg-green-500/10 text-green-400 px-3 py-1 rounded-full font-bold">MARKETING</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia" class="px-6 py-32 max-w-6xl mx-auto">
-        <h2 class="text-gray-500 text-xs tracking-[0.3em] uppercase mb-16">Selected Projects</h2>
-        
-        <div class="space-y-40">
-            <div class="grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
-                <div>
-                    <h3 class="text-4xl font-bold mb-6">Landing Page E-commerce</h3>
-                    <p class="text-gray-400 mb-8 leading-relaxed">Maquetación de alto impacto diseñada para maximizar la conversión en Shopify. Incluye lógica personalizada en Liquid y estilos CSS responsivos.</p>
-                    
-                    <div class="flex space-x-3 mb-8">
-                        <button onclick="toggleCard('p1', 'preview')" id="p1-btn-preview" class="tab-btn active px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Preview</button>
-                        <button onclick="toggleCard('p1', 'code')" id="p1-btn-code" class="tab-btn border border-white/10 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">View Code</button>
-                    </div>
-                </div>
-
-                <div class="bg-[#0a0a0a] rounded-[2.5rem] overflow-hidden border border-white/5 aspect-video flex items-center justify-center relative shadow-2xl">
-                    <div id="p1-preview" class="preview-display w-full h-full">
-                        <iframe style="width: 100%; height: 100%;" scrolling="no" title="Project Landing" src="https://codepen.io/TU_USUARIO/embed/TU_ID_DE_PEN?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-                    </div>
-                    <div id="p1-code" class="code-display w-full h-full p-8 font-mono text-[11px] text-blue-400 bg-black overflow-auto">
-                        <pre><code>
-// Ejemplo de Maquetación Responsiva
-.landing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--brand-color);
-}
-
-@media (max-width: 768px) {
-    .landing-container { flex-direction: column; }
-}
-                        </code></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-32 px-6 text-center">
-        <div data-aos="zoom-in">
-            <h2 class="text-5xl md:text-7xl font-bold mb-12 tracking-tighter leading-none">¿Listo para <br> <span class="text-blue-500">conectar?</span></h2>
-            <a href="mailto:mretamozokaroll05@gmail.com" class="bg-white text-black px-12 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform inline-block">Trabajemos juntos</a>
-        </div>
-        <div class="mt-24 flex justify-center space-x-10 text-[10px] font-bold tracking-[0.4em] text-gray-600 uppercase">
-            <a href="#" class="hover:text-white">GitHub</a>
-            <a href="#" class="hover:text-white">LinkedIn</a>
-            <a href="#" class="hover:text-white">Instagram</a>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-        lucide.createIcons();
-
-        function toggleCard(projectId, view) {
-            const preview = document.getElementById(projectId + '-preview');
-            const code = document.getElementById(projectId + '-code');
-            const btnPrev = document.getElementById(projectId + '-btn-preview');
-            const btnCode = document.getElementById(projectId + '-btn-code');
-
-            if (view === 'code') {
-                preview.classList.add('hidden');
-                code.classList.add('active');
-                btnCode.classList.add('active');
-                btnPrev.classList.remove('active');
-            } else {
-                preview.classList.remove('hidden');
-                code.classList.remove('active');
-                btnPrev.classList.add('active');
-                btnCode.classList.remove('active');
-            }
-        }
-    </script>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:retamozokaroll05@gmail.com">retamozokaroll05@gmail.com</a></p>
+            <form action="mailto:retamozokaroll05@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+        <section>
+            <h2>Social Links</h2>
+            <p>Instagram: <a href="https://www.instagram.com/k8studio_?utm_source=qr&igsh=bDg2b2c1enA0ajE1">My Instagram</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/karoll-r-3549721aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">My LinkedIn</a></p>
+            <p>GitHub: <a href="https://github.com/retamozokaroll05-Jia05">My GitHub Profile</a></p>
+        </section>
+    </main>
 </body>
 </html>
