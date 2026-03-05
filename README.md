@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <title>Modern Portfolio</title>
+    <style>
+        body { background-color: #1a202c; color: #f7fafc; } /* Dark theme */
+        h1, h2, h3 { color: #81ecec; } /* Blue-Teal Accent */
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Navigation Bar -->
+    <nav class="flex justify-between items-center p-5 bg-gray-800">
+        <div class="text-2xl font-bold">My Portfolio</div>
+        <div class="block md:hidden">
+            <button id="hamburger" class="flex items-center p-2 rounded text-gray-200">☰</button>
+        </div>
+        <div class="hidden md:flex md:space-x-10">
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center py-20">
+        <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">Welcome to My Portfolio</h1>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-10 bg-gray-700">
+        <h2 class="text-3xl mb-5">My Skills</h2>
+        <div class="space-y-4">
+            <div class="flex justify-between">
+                <div>HTML</div>
+                <div class="w-1/2 bg-gray-300 rounded-full"><div class="bg-blue-400 h-2 rounded-full w-4/5"></div></div>
+            </div>
+            <div class="flex justify-between">
+                <div>CSS</div>
+                <div class="w-1/2 bg-gray-300 rounded-full"><div class="bg-blue-400 h-2 rounded-full w-3/4"></div></div>
+            </div>
+            <div class="flex justify-between">
+                <div>JavaScript</div>
+                <div class="w-1/2 bg-gray-300 rounded-full"><div class="bg-blue-400 h-2 rounded-full w-3/5"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-10">
+        <h2 class="text-3xl mb-5">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="border p-5"><h3>Development</h3></div>
+            <div class="border p-5"><h3>Design</h3><a href="https://www.behance.net/karollretamozo" class="text-blue-400">View Projects</a></div>
+            <div class="border p-5"><h3>Strategy</h3><a href="#caseStudy" class="text-blue-400">View Case Study</a></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-10 bg-gray-700">
+        <h2 class="text-3xl mb-5">Contact Me</h2>
+        <form action="mailto:retamozokaroll05@gmail.com" method="get" class="space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full p-2 rounded">
+            <input type="email" placeholder="Your Email" class="w-full p-2 rounded">
+            <textarea placeholder="Your Message" class="w-full p-2 rounded"></textarea>
+            <button type="submit" class="bg-blue-500 text-white p-2 rounded">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-gray-800 text-center">
+        <a href="https://www.instagram.com/k8studio_?utm_source=qr&igsh=bDg2b2c1enA0ajE1">Instagram</a>
+        <a href="https://www.linkedin.com/in/karoll-r-3549721aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="ml-5">LinkedIn</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+        document.getElementById('hamburger').onclick = function() {
+            const nav = document.querySelector('nav > div.md\:flex');
+            nav.classList.toggle('hidden');
+        };
+    </script>
+</body>
+</html>
